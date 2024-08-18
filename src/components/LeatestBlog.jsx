@@ -10,8 +10,8 @@ export const LeatestBlog = () => {
         <div className=" text-center ">
                 <h3 className='font-Sans font-bold text-[42px] text-[#0D0E43]'>Leatest Blog</h3>
             </div>
-            <Flex className=" justify-between mt-[50px]">
-                <div className="w-[33%] duration-300 ease-in-out hover:mt-3">
+            <div className=" lg:flex justify-between mt-[50px] px-3">
+                <div className="lg:w-[33%] w-full duration-300 ease-in-out hover:mt-3">
                 <img src={blog} alt="" />
               <div className="py-[20px] px-3 ">
               <h5 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>SaberAli</h5>
@@ -21,7 +21,7 @@ export const LeatestBlog = () => {
                 <h3 className=' relative font-Sans font-bold text-[18px] text-[#0D0E43] mt-[10px] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[2px] after:w-[90px] after:bg-[#0D0E43]'>Shop Now</h3>
               </div>
                 </div>
-                <div className="w-[33%] duration-300 ease-in-out hover:mt-3">
+                <div className="lg:w-[33%] w-full  duration-300 ease-in-out hover:mt-3 my-[20px] lg:my-0">
                 <img src={blog} alt="" />
               <div className="py-[20px] px-3 ">
               <h5 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>SaberAli</h5>
@@ -31,7 +31,7 @@ export const LeatestBlog = () => {
                 <h3 className=' relative font-Sans font-bold text-[18px] text-[#FB2E86] mt-[10px] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[2px] after:w-[90px] after:bg-[#FB2E86]'>Shop Now</h3>
               </div>
                 </div>
-                <div className="w-[33%] duration-300 ease-in-out hover:mt-3">
+                <div className="lg:w-[33%] w-full  duration-300 ease-in-out hover:mt-3">
                 <img src={blog} alt="" />
               <div className="py-[20px] px-3 ">
               <h5 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>SaberAli</h5>
@@ -41,7 +41,7 @@ export const LeatestBlog = () => {
                 <h3 className=' relative font-Sans font-bold text-[18px] text-[#08D15F] mt-[10px] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[2px] after:w-[90px] after:bg-[#08D15F]'>Shop Now</h3>
               </div>
                 </div>
-            </Flex>
+            </div>
         </Container>
     </section>
   )

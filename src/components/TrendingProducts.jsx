@@ -14,10 +14,10 @@ const TrendingProducts = () => {
     <section className='py-[100px]'>
         <Container>
         <div className=" text-center ">
-                <h3 className='font-Sans font-bold text-[42px] text-[#0D0E43]'>Trending Products</h3>
+                <h3 className='font-Sans font-bold lg:text-[42px] text-[32px] text-[#0D0E43]'>Trending Products</h3>
             </div>
-            <Flex className=" justify-between px-3">
-            <div className="w-[25%] pt-[20px] pb-2 bg-[#fff] ">
+            <div className=" lg:flex md:flex justify-between px-3">
+            <div className="lg:w-[25%] w-full md:w-[50%] pt-[20px] pb-2 bg-[#fff] ">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%]' src={chair000} alt="" />
                    <div className="  text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
@@ -27,7 +27,7 @@ const TrendingProducts = () => {
                     </div>
                     </div>
                 </div>
-            <div className="w-[25%] pt-[20px] pb-2 bg-[#fff] ">
+            <div className="lg:w-[25%] w-full md:w-[50%]  pt-[20px] pb-2 bg-[#fff] ">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%]' src={chair0001} alt="" />
                    <div className="  text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
@@ -37,7 +37,7 @@ const TrendingProducts = () => {
                     </div>
                     </div>
                 </div>
-            <div className="w-[25%] pt-[20px] pb-2 bg-[#fff] ">
+            <div className="lg:w-[25%] w-full md:w-[50%]  pt-[20px] pb-2 bg-[#fff] ">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%]' src={chair0002} alt="" />
                    <div className="  text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
@@ -47,7 +47,7 @@ const TrendingProducts = () => {
                     </div>
                     </div>
                 </div>
-            <div className="w-[25%] pt-[20px] pb-2 bg-[#fff] ">
+            <div className="lg:w-[25%] w-full md:w-[50%]  pt-[20px] pb-2 bg-[#fff] ">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%]' src={chair0003} alt="" />
                    <div className="  text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
@@ -57,9 +57,9 @@ const TrendingProducts = () => {
                     </div>
                     </div>
                 </div>
-            </Flex>
-            <div className="flex justify-between mt-[50px]">
-                <div className="w-[35%]">
+            </div>
+            <div className="lg:flex justify-between mt-[50px] px-3">
+                <div className="lg:w-[35%] w-full">
                     <div className=" pt-[50px] px-[50px] bg-[#FFF6FB] ">
                         <div className="">
                         <h2 className='font-Sans font-bold text-[22px] text-[#0D0E43]'>23% off in all products</h2>
@@ -70,7 +70,7 @@ const TrendingProducts = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-[35%]">
+                <div className="lg:w-[35%] w-full">
                 <div className=" pt-[50px] pb-[61px] px-[50px] bg-[#EEEFFB] ">
                         <div className="">
                         <h2 className='font-Sans font-bold text-[22px] text-[#0D0E43]'>23% off in all products</h2>
@@ -81,7 +81,7 @@ const TrendingProducts = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-[27%] ">
+                <div className="lg:w-[27%] w-full ">
                     <div className="flex gap-3 items-center">
                     <div className="">
                         <img src={mini01} alt="" />

@@ -13,8 +13,8 @@ const Shopex = () => {
         <div className=" text-center ">
                 <h3 className='font-Sans font-bold text-[42px] text-[#0D0E43]'>What Shopex Offer!</h3>
             </div>
-            <Flex  className=" justify-between py-[50px] bg-[#F6F7FB] px-4">
-            <div className="w-[24%] pt-[20px] pb-2 bg-[#fff] ">
+            <div  className=" lg:flex justify-between py-[50px] bg-[#F6F7FB] px-4">
+            <div className="lg:w-[24%] w-full pt-[20px] pb-2 bg-[#fff] ">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%]' src={offer01} alt="" />
                    <div className=" relative text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
@@ -26,7 +26,7 @@ const Shopex = () => {
                     </div>
                     </div>
                 </div>
-            <div className="w-[24%] pt-[20px] pb-2 bg-[#fff] ">
+            <div className="lg:w-[24%] w-full  pt-[20px] pb-2 bg-[#fff] ">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%]' src={offer02} alt="" />
                    <div className=" relative text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
@@ -38,7 +38,7 @@ const Shopex = () => {
                     </div>
                     </div>
                 </div>
-            <div className="w-[24%] pt-[20px] pb-2 bg-[#fff] ">
+            <div className="lg:w-[24%] w-full  pt-[20px] pb-2 bg-[#fff] ">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%]' src={offer03} alt="" />
                    <div className=" relative text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
@@ -50,7 +50,7 @@ const Shopex = () => {
                     </div>
                     </div>
                 </div>
-            <div className="w-[24%] pt-[20px] pb-2 bg-[#fff] ">
+            <div className="lg:w-[24%] w-full  pt-[20px] pb-2 bg-[#fff] ">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%]' src={offer04} alt="" />
                    <div className=" relative text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
@@ -63,7 +63,7 @@ const Shopex = () => {
                     </div>
                 </div>
 
-            </Flex>
+            </div>
         </Container>
     </section>
   )

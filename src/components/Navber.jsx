@@ -4,6 +4,7 @@ import Flex from './Flex'
 import hekti from "../assets/Hekto.png"
 import { IoIosArrowDown } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 
 const Navber = () => {
@@ -17,9 +18,9 @@ const Navber = () => {
           <div className="w-[40%] ">
             <div className="">
               <ul className='flex justify-between items-center text-center'>
-                <li className='flex items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'>Home <IoIosArrowDown/> </li>
-                <li className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'>Pages</li>
-                <li   className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'>Products</li>
+                <li className='flex items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'><Link to="/">Home</Link> <IoIosArrowDown/> </li>
+                <li className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'><Link to="/shop">Pages</Link></li>
+                <li   className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'><Link to="/ProductsD">Products</Link></li>
                 <li   className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'>Blog</li>
                 <li  className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]' >Shop</li>
                 <li   className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'>Contact</li>

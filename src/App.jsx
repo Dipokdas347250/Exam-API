@@ -1,11 +1,20 @@
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider, } from "react-router-dom"
 import RootLayout from "./components/RootLayout"
-import { Home } from "./components/pages/Home"
+import { Home } from "./pages/Home"
+import Shop from "./pages/Shop"
+import ShopLIst from "./pages/ShopLIst"
+import { ProductsD } from "./pages/ProductsD"
+import ProductDetails from "./pages/ProductDetails"
+
 
 
 let router = createBrowserRouter(createRoutesFromElements(
   <Route element={<RootLayout/>}>
     <Route index element={<Home/>}></Route>
+    <Route path="/Shop" element={<Shop/>}></Route>
+    <Route path="/Shoplist" element={<ShopLIst/>}></Route>
+    <Route path="/ProductsD" element={<ProductsD/>}></Route>
+    <Route path="/ProductDetails" element={<ProductDetails/>}></Route>
 
 
   </Route>

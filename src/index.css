@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.slick-dots  .slick-active div{
+    border-bottom: 5px solid #000 !important;
+}

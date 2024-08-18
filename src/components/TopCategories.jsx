@@ -8,16 +8,59 @@ import top03 from "../assets/top03.png"
 import get from "../assets/get.png"
 
 
+import Slider from "react-slick";
+
 const TopCategories = () => {
+
+        const settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 4000,
+          arrows:false,
+       
+            appendDots: dots => (
+              <div
+                style={{
+                  borderRadius: "10px",
+                  padding: "10px",
+                  position:'absolute',
+                  left:'50%',
+                  bottom:'-50px',
+                  transform:'translateX(-50%)',
+                  
+                }}
+              >
+                <ul style={{ margin: "0px" , display:'flex' }}> {dots} </ul>
+              </div>
+            ),
+            customPaging: i => (
+              <div
+                style={{
+                  width: "30px",
+                  color: "blue",
+                  padding: "0  20px",
+                  borderBottom: "5px #F6F7FB solid"
+                }}
+              >
+                
+              </div>
+            )
+          };
   return (
     <section className='pb-[100px]'>
         <Container>
         <div className=" text-center ">
                 <h3 className='font-Sans font-bold text-[42px] text-[#0D0E43]'>Top Categories</h3>
             </div>
-            <Flex className=" justify-between px-3 mt-[50px]">
-            <div className="w-[24%] pt-[20px] pb-2  ">
-                    <div className="bg-[#F6F7FB] py-[50px] rounded-full">
+          
+                <Slider {...settings}>
+            <div className="lg:w-[24%] w-full pt-[20px] pb-2 px-3  ">
+                    <div className="bg-[#F6F7FB] py-[50px] lg:rounded-full">
                    <img className='ml-[50%] translate-x-[-50%]' src={top} alt="" />
                    <button className='py-[10px] px-[25px] bg-[#08D15F] ml-[50%] translate-x-[-50%] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>View Shop</button>
                     </div>
@@ -69,12 +112,12 @@ const TopCategories = () => {
                     </div>
                 </div>
 
-            </Flex>
+                </Slider>
         </Container>
-        <div className=" mt-[50px] ">
+        <div className=" mt-[50px] px-3 ">
            <img className=' ' src={get} alt="" />
         <div className=" text-center mt-[30px]">
-                <h3 className='font-Sans font-bold text-[42px] text-[#0D0E43]'>Get Leatest Update By Subscribe
+                <h3 className='font-Sans font-bold lg:text-[42px] text-[32px] text-[#0D0E43]'>Get Leatest Update By Subscribe
                 0ur Newslater</h3>
            <button className='py-[10px] px-[25px] bg-[#FB2E86] mt-[0px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Shop Now</button>
             </div>

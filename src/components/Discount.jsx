@@ -25,8 +25,8 @@ const Discount = () => {
             </div>
                 <div className="w-[30%]"></div>
             </div>
-            <Flex className=" justify-between px-3">
-            <div className="w-[50%] mt-[100px]">
+            <div className=" lg:flex justify-between px-3">
+            <div className="lg:w-[50%] w-full mt-[100px]">
                 <h2 className='font-Sans font-bold text-[42px] text-[#0D0E43]'>20% Discount Of All Products</h2>
                 <h3 className='font-Sans font-bold text-[22px] text-[#FB2E86]'>Eams Sofa Compact</h3>
                 <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[40px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget feugiat habitasse nec, bibendum condimentum.</p>
@@ -52,10 +52,10 @@ const Discount = () => {
                 </div>
                 <button className='py-[10px] px-[25px] bg-[#FB2E86] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Shop Now</button>
             </div>
-            <div className="w-[50%]">
+            <div className="lg:w-[50%] w-full">
                 <img src={item} alt="" />
             </div>
-            </Flex>
+            </div>
         </Container>
     </section>
   )

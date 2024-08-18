@@ -7,11 +7,11 @@ const Trending = () => {
   return (
    <section className='py-[50px] bg-[#F1F0FF]'>
     <Container>
-        <Flex className=" justify-between ">
-           <div className="w-[50%]">
+        <div className=" lg:flex justify-between ">
+           <div className="lg:w-[50%] w-full">
             <img className='' src={tren} alt="" />
            </div>
-           <div className="w-[50%]">
+           <div className="lg:w-[50%] w-full">
             <div className="mt-[50px]">
                 <h2 className='font-Sans font-bold text-[42px] text-[#0D0E43]'>Unique Features Of leatest &
                 Trending Poducts</h2>
@@ -36,7 +36,7 @@ const Trending = () => {
                 </div>
             </div>
            </div>
-        </Flex>
+        </div>
     </Container>
    </section>
   )

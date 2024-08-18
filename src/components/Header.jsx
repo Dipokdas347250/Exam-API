@@ -16,9 +16,9 @@ const Header = () => {
   return (
     <section className=' py-2 bg-[#7E33E0]  '>
         <Container>
-            <Flex className="">
-                <div className="w-[70%] flex">
-                    <div className="w-[35%] flex items-center gap-1 text-[#F1F1F1]">
+           <div className="lg:flex">
+           <div className="lg:w-[70%] lg:flex">
+                    <div className="lg:w-[35%] w-full flex items-center   gap-1 text-[#F1F1F1]">
                         <MdOutgoingMail/>
                     <h2 className=' font-Sans font-semibold text-[16px] '>mhhasanul@gmail.com</h2>
 
@@ -56,8 +56,7 @@ const Header = () => {
 
                     </div>
                 </div>
-                
-            </Flex>
+           </div>
         </Container>
     </section>
   )
