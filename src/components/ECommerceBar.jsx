@@ -5,25 +5,25 @@ import { IoGrid } from "react-icons/io5";
 const ECommerceBar = () => {
   return (
     <>
-     <div className="flex mt-[100px] bg-[#fff] py-[50px] px-3">
-                <div className="w-[40%]">
+     <div className="lg:flex mt-[100px] bg-[#fff] py-[50px] px-3">
+                <div className="lg:w-[40%] w-full">
                     <h2 className='font-Sans font-bold text-[22px] text-[#0D0E43]'>Ecommerce Acceories & Fashion item </h2>
                     <h5 className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>About 9,620 results (0.62 seconds)</h5>
                 </div>
-                <div className="w-[60%] flex">
-                    <div className="w-[25%] flex items-center justify-between">
+                <div className="lg:w-[60%] w-full lg:flex">
+                    <div className="lg:w-[25%] w-full lg:flex items-center justify-between my-[20px] lg:my-0">
                         <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>per page </h4> 
-                            <input className='h-[25px] w-[60%] border-2 border-[#000] ' type="text" />
+                            <input className='h-[25px] lg:w-[60%] w-[70%] border-2 border-[#000] rounded-lg ' type="text" />
                     </div>
-                    <div className="w-[25%] flex items-center justify-around">
-                    <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43] ml-[10px]'>Sort By: </h4> 
-                    <input className='h-[25px] w-[60%] border-2 border-[#000] ' type="text" />
+                    <div className="lg:w-[25%] w-full lg:flex items-center justify-around mb-[20px] lg:mb-0">
+                    <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43] lg:ml-[10px]'>Sort By: </h4> 
+                    <input className='h-[25px] lg:w-[60%] w-[70%] border-2 border-[#000] rounded-lg ' type="text" />
                     </div>
-                    <div className="w-[50%] flex items-center justify-around">
-                    <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43] ml-[10px]'>View: </h4> 
+                    <div className="lg:w-[50%] w-full flex items-center justify-around">
+                    <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43] lg:ml-[10px]'>View: </h4> 
                     <IoGrid/>
                     <FaThList/>
-                    <input className='h-[25px] w-[60%] border-2 border-[#000] ' type="text" />
+                    <input className='h-[25px] w-[60%] border-2 border-[#000] rounded-lg ' type="text" />
                     </div>
                     
                     

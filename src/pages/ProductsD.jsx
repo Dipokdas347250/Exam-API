@@ -29,8 +29,8 @@ export const ProductsD = () => {
                 <div className="">
                     <ECommerceBar />
                 </div>
-                <div className="flex justify-between px-3">
-                    <div className="w-[23%] mt-[50px]">
+                <div className="lg:flex justify-between px-3">
+                    <div className="lg:w-[23%] w-full mt-[50px]">
                         <div className="">
                             <h2 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[3px] after:w-[150px] after:bg-[#0D0E43]'>Product Brand</h2>
                         </div>
@@ -133,16 +133,16 @@ export const ProductsD = () => {
                             <h2 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[3px] after:w-[120px] after:bg-[#0D0E43]'>Price Filter</h2>
                         </div>
                     </div>
-                    <div className="w-[73%]">
+                    <div className=" lg:w-[73%] w-full">
                         <Link to="/productDetails">
                         
-                        <div className="flex justify-between mt-[50px] px-3">
-                            <div className="w-[40%]">
+                        <div className="lg:flex justify-between mt-[50px] px-3">
+                            <div className="lg:w-[40%] w-full">
                                 <div className="">
                                     <img className='w-full' src={shop1} alt="" />
                                 </div>
                             </div>
-                            <div className="w-[55%]">
+                            <div className="lg:w-[55%] w-full">
                                 <div className="">
                                     <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
                                     <div className="flex">
@@ -158,7 +158,7 @@ export const ProductsD = () => {
                                             <FaStar />
                                         </div>
                                     </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
+                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
                                     <div className="flex mt-[20px] gap-6">
                                         <FiShoppingCart />
                                         <FaRegHeart />
@@ -167,15 +167,15 @@ export const ProductsD = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-between mt-[50px] px-3">
-                            <div className="w-[40%]">
+                        <div className="lg:flex justify-between mt-[50px] px-3">
+                            <div className="lg:w-[40%] w-full">
                                 <div className="">
                                     <img className='w-full' src={shop2} alt="" />
                                 </div>
                             </div>
-                            <div className="w-[55%]">
+                            <div className="lg:w-[55%] w-full">
                                 <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>In nulla</h2>
+                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
                                     <div className="flex">
                                         <div className="flex mt-[20px] gap-2">
                                             <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
@@ -189,7 +189,7 @@ export const ProductsD = () => {
                                             <FaStar />
                                         </div>
                                     </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
+                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
                                     <div className="flex mt-[20px] gap-6">
                                         <FiShoppingCart />
                                         <FaRegHeart />
@@ -198,15 +198,15 @@ export const ProductsD = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-between mt-[50px] px-3">
-                            <div className="w-[40%]">
+                        <div className="lg:flex justify-between mt-[50px] px-3">
+                            <div className="lg:w-[40%] w-full">
                                 <div className="">
                                     <img className='w-full' src={shop3} alt="" />
                                 </div>
                             </div>
-                            <div className="w-[55%]">
+                            <div className="lg:w-[55%] w-full">
                                 <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Vel sem</h2>
+                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
                                     <div className="flex">
                                         <div className="flex mt-[20px] gap-2">
                                             <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
@@ -220,7 +220,7 @@ export const ProductsD = () => {
                                             <FaStar />
                                         </div>
                                     </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
+                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
                                     <div className="flex mt-[20px] gap-6">
                                         <FiShoppingCart />
                                         <FaRegHeart />
@@ -229,15 +229,15 @@ export const ProductsD = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-between mt-[50px] px-3">
-                            <div className="w-[40%]">
+                        <div className="lg:flex justify-between mt-[50px] px-3">
+                            <div className="lg:w-[40%] w-full">
                                 <div className="">
                                     <img className='w-full' src={shop4} alt="" />
                                 </div>
                             </div>
-                            <div className="w-[55%]">
+                            <div className="lg:w-[55%] w-full">
                                 <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Porttitor cum</h2>
+                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
                                     <div className="flex">
                                         <div className="flex mt-[20px] gap-2">
                                             <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
@@ -251,7 +251,7 @@ export const ProductsD = () => {
                                             <FaStar />
                                         </div>
                                     </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
+                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
                                     <div className="flex mt-[20px] gap-6">
                                         <FiShoppingCart />
                                         <FaRegHeart />
@@ -260,15 +260,15 @@ export const ProductsD = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-between mt-[50px] px-3">
-                            <div className="w-[40%]">
+                        <div className="lg:flex justify-between mt-[50px] px-3">
+                            <div className="lg:w-[40%] w-full">
                                 <div className="">
                                     <img className='w-full' src={shop5} alt="" />
                                 </div>
                             </div>
-                            <div className="w-[55%]">
+                            <div className="lg:w-[55%] w-full">
                                 <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Nunc in</h2>
+                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
                                     <div className="flex">
                                         <div className="flex mt-[20px] gap-2">
                                             <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
@@ -282,7 +282,7 @@ export const ProductsD = () => {
                                             <FaStar />
                                         </div>
                                     </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
+                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
                                     <div className="flex mt-[20px] gap-6">
                                         <FiShoppingCart />
                                         <FaRegHeart />
@@ -291,15 +291,15 @@ export const ProductsD = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-between mt-[50px] px-3">
-                            <div className="w-[40%]">
+                        <div className="lg:flex justify-between mt-[50px] px-3">
+                            <div className="lg:w-[40%] w-full">
                                 <div className="">
                                     <img className='w-full' src={shop6} alt="" />
                                 </div>
                             </div>
-                            <div className="w-[55%]">
+                            <div className="lg:w-[55%] w-full">
                                 <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Vitae facilisis</h2>
+                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
                                     <div className="flex">
                                         <div className="flex mt-[20px] gap-2">
                                             <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
@@ -313,7 +313,7 @@ export const ProductsD = () => {
                                             <FaStar />
                                         </div>
                                     </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
+                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
                                     <div className="flex mt-[20px] gap-6">
                                         <FiShoppingCart />
                                         <FaRegHeart />
@@ -322,15 +322,15 @@ export const ProductsD = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-between mt-[50px] px-3">
-                            <div className="w-[40%]">
+                        <div className="lg:flex justify-between mt-[50px] px-3">
+                            <div className="lg:w-[40%] w-full">
                                 <div className="">
                                     <img className='w-full' src={shop7} alt="" />
                                 </div>
                             </div>
-                            <div className="w-[55%]">
+                            <div className="lg:w-[55%] w-full">
                                 <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Curabitur lectus</h2>
+                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
                                     <div className="flex">
                                         <div className="flex mt-[20px] gap-2">
                                             <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
@@ -344,7 +344,7 @@ export const ProductsD = () => {
                                             <FaStar />
                                         </div>
                                     </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
+                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
                                     <div className="flex mt-[20px] gap-6">
                                         <FiShoppingCart />
                                         <FaRegHeart />
@@ -353,6 +353,7 @@ export const ProductsD = () => {
                                 </div>
                             </div>
                         </div>
+                       
                         </Link>
                         </div>
                     
@@ -360,9 +361,9 @@ export const ProductsD = () => {
                 </div>
 
                 <div className="mt-[100px]">
-                        <div className="flex justify-between">
+                        <div className="lg:flex justify-between">
                             <div className="w-[15%]"></div>
-                            <div className="w-[70%]">
+                            <div className="lg:w-[70%] w-full">
                                 <img src={chair01} alt="" />
                             </div>
                             <div className="w-[15%]"></div>

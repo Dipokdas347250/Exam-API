@@ -24,8 +24,8 @@ const Shop = () => {
                 </div>
 
                 <Link to="/shoplist">
-                <div className="mt-[50px] flex justify-between px-3">
-                    <div className="w-[24%]">
+                <div className="mt-[50px] lg:flex   justify-between px-3">
+                    <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop01} alt="" />
                         </div>
@@ -38,7 +38,7 @@ const Shop = () => {
 
                         </div>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop02} alt="" />
                         </div>
@@ -51,7 +51,7 @@ const Shop = () => {
 
                         </div>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop01} alt="" />
                         </div>
@@ -64,7 +64,7 @@ const Shop = () => {
 
                         </div>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop02} alt="" />
                         </div>
@@ -79,8 +79,8 @@ const Shop = () => {
                     </div>
 
                 </div>
-                <div className="mt-[50px] flex justify-between px-3">
-                    <div className="w-[24%]">
+                <div className="mt-[50px] lg:flex justify-between px-3">
+                <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop02} alt="" />
                         </div>
@@ -93,7 +93,7 @@ const Shop = () => {
 
                         </div>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop01} alt="" />
                         </div>
@@ -106,7 +106,7 @@ const Shop = () => {
 
                         </div>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop02} alt="" />
                         </div>
@@ -119,7 +119,7 @@ const Shop = () => {
 
                         </div>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop01} alt="" />
                         </div>
@@ -134,8 +134,8 @@ const Shop = () => {
                     </div>
 
                 </div>
-                <div className="mt-[50px] flex justify-between px-3">
-                    <div className="w-[24%]">
+                <div className="mt-[50px] lg:flex justify-between px-3">
+                <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop01} alt="" />
                         </div>
@@ -148,7 +148,7 @@ const Shop = () => {
 
                         </div>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop02} alt="" />
                         </div>
@@ -161,7 +161,7 @@ const Shop = () => {
 
                         </div>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop01} alt="" />
                         </div>
@@ -174,7 +174,7 @@ const Shop = () => {
 
                         </div>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="lg:w-[24%] w-full sm:w-[50%]">
                         <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                             <img src={shop02} alt="" />
                         </div>
@@ -193,9 +193,9 @@ const Shop = () => {
 
 
                 <div className="pt-[100px] px-3">
-                    <div className="flex justify-between">
+                    <div className="lg:flex justify-between">
                         <div className="w-[15%]"></div>
-                        <div className="w-[70%]">
+                        <div className="lg:w-[70%] w-full">
                             <img src={chair01} alt="" />
                         </div>
                         <div className="w-[15%]"></div>
