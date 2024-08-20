@@ -8,6 +8,8 @@ import ProductDetails from "./pages/ProductDetails"
 import { Addtocart } from "./pages/Addtocart"
 import About from "./pages/About"
 import Yourorder from "./pages/Yourorder"
+import Proceed from "./pages/Proceed"
+import Blog from "./pages/Blog"
 
 
 
@@ -19,8 +21,10 @@ let router = createBrowserRouter(createRoutesFromElements(
     <Route path="/ProductsD" element={<ProductsD/>}></Route>
     <Route path="/ProductDetails" element={<ProductDetails/>}></Route>
     <Route path="/Addtocart" element={<Addtocart/>}></Route>
+    <Route path="/Proceed" element={<Proceed/>}></Route>
     <Route path="/Yourorder" element={<Yourorder/>}></Route>
     <Route path="/About" element={<About/>}></Route>
+    <Route path="/Blog" element={<Blog/>}></Route>
 
 
   </Route>

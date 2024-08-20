@@ -51,10 +51,11 @@ const Featured = () => {
               left:'50%',
               bottom:'-50px',
               transform:'translateX(-50%)',
+             
               
             }}
           >
-            <ul style={{ margin: "0px" , display:'flex' }}> {dots} </ul>
+            <ul style={{ margin: "0px" , display:'flex', }}> {dots} </ul>
           </div>
         ),
         customPaging: i => (
@@ -71,13 +72,13 @@ const Featured = () => {
         )
       };
   return (
-    <section className='py-[100px]'>
+    <section className='py-[100px] '>
         <Container>
             <div className=" text-center ">
                 <h3 className='font-Sans font-bold lg:text-[42px] text-[32px] text-[#0D0E43]'>Featured Products</h3>
             </div>
             
-            <Slider {...settings} >
+            <Slider className='' {...settings} >
                 <div className="lg:w-[24%] w-full pt-[20px] pb-2 bg-[#F6F7FB] ">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%] h-[250px]' src={chair01} alt="" />

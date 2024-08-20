@@ -9,9 +9,9 @@ import { Link } from 'react-router-dom';
 
 const Navber = () => {
   return (
-    <section className='py-4 bg-[#f1f1f1] '>
+    <section className='py-4 bg-[#f1f1f1]  px-3 '>
       <Container>
-        <Flex className=" items-center">
+        <div className=" flex items-center">
           <div className="w-[20%]">
             <img src={hekti} alt="" />
           </div>
@@ -21,7 +21,9 @@ const Navber = () => {
                 <li className='flex items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'><Link to="/">Home</Link> <IoIosArrowDown/> </li>
                 <li className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'><Link to="/shop">Pages</Link></li>
                 <li   className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'><Link to="/ProductsD">Products</Link></li>
-                <li   className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'>Blog</li>
+                <li   className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]'>
+                  <Link to="/Blog">Blog</Link>
+                </li>
                 <li  className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86]' >
                   <Link to="/About">About us</Link>
                 </li>
@@ -37,7 +39,7 @@ const Navber = () => {
               </div>
             </div>
           </div>
-        </Flex>
+        </div>
       </Container>
     </section>
   )

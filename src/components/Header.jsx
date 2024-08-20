@@ -14,7 +14,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <section className=' py-2 bg-[#7E33E0]  '>
+    <section className=' py-2 bg-[#7E33E0] px-3  '>
         <Container>
            <div className="lg:flex">
            <div className="lg:w-[70%] lg:flex">
@@ -35,9 +35,13 @@ const Header = () => {
                         <IoIosArrowDown/>
 
                     </div>
-                    <div className=" flex font-Sans font-semibold text-[16px] items-center text-[#F1F1F1]">
-                        <h3>USD</h3>
-                        <IoIosArrowDown/>
+                    <div className="  font-Sans font-semibold text-[16px] items-center text-[#F1F1F1]">
+                    <select className='bg-[#7E33E0] border-none'  >
+                      <option value="">USD</option>
+                      <option value="">BDT</option>
+                      
+                    </select>
+                        
 
                     </div>
                     <div className=" flex font-Sans font-semibold text-[16px] items-center text-[#F1F1F1]">

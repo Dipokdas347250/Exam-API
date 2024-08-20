@@ -16,7 +16,7 @@ const Discount = () => {
                 <div className="w-[30%]"></div>
                 <div className="w-[40%]  ">
             <ul className='flex  justify-around'>
-                    <li  className=' relative  cursor-pointer items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86] after:absolute after:contain-[""] after:bottom-0 after:left-0  after:h-[5px] after:w-[0px] after:bg-[#FB2E86] after:duration-300 after:ease-in-out after:hover:w-[90px]'>Wood Chair</li>
+                    <li  className=' relative  cursor-pointer items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86] after:absolute after:contain-[""] after:bottom-0 after:left-0  after:h-[5px] after:w-[40px] after:bg-[#FB2E86] after:duration-300 after:ease-in-out after:hover:w-[90px]'>Wood Chair</li>
                     <li  className=' relative  cursor-pointer items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86] after:absolute after:contain-[""] after:bottom-0 after:left-0  after:h-[5px] after:w-[0px] after:bg-[#FB2E86] after:duration-300 after:ease-in-out after:hover:w-[90px]'>Plastic Chair</li>
                     <li  className=' relative  cursor-pointer items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86] after:absolute after:contain-[""] after:bottom-0 after:left-0  after:h-[5px] after:w-[0px] after:bg-[#FB2E86] after:duration-300 after:ease-in-out after:hover:w-[105px]'>Sofa Colletion</li>
                     

@@ -96,7 +96,7 @@ export const Addtocart = () => {
                                         <p className='font-Sans font-semibold text-[16px] text-[#fff]'>Shipping & taxes calculated at checkout</p>
                                     </div>
                                     <div className="mt-[30px]">
-                                    <Link to="/Yourorder">
+                                    <Link to="/Proceed">
                                     <button className='py-[10px] px-[80px] bg-[#19D16F] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Proceed To Checkout</button>
                                     </Link>
                                     </div>
