@@ -17,8 +17,8 @@ const Proceed = () => {
                         <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Cart/ Information/ Shipping/ Payment</p>
                     </div>
                     <div className="">
-                        <div className="flex justify-between">
-                            <div className="w-[63%] py-9 px-5 bg-[#C1C8E1] rounded-lg">
+                        <div className="lg:flex justify-between">
+                            <div className="lg:w-[63%] w-full py-9 px-5 bg-[#C1C8E1] rounded-lg">
                                 <form className='' action=''>
                                     <div className=" flex justify-between items-center">
                                         <h3 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Contact Information</h3>
@@ -67,11 +67,11 @@ const Proceed = () => {
 
                                 </form>
                             </div>
-                            <div className="w-[35%] px-4  ">
+                            <div className="lg:w-[35%] w-full px-4  ">
                                <div className="flex justify-between items-center relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#0D0E43]">
                                
                                     
-                                    <div className="w-[55%] flex justify-between">
+                                    <div className="lg:w-[55%] w-[80%] sm:w-[55%] mt-10 lg:mt-0 flex justify-between">
                                         <div className="">
                                             <img src={cart01} alt="" />
                                         </div>
@@ -91,7 +91,7 @@ const Proceed = () => {
                                <div className="flex justify-between  items-center mt-9 relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#0D0E43]">
                                
                                     
-                                    <div className="w-[55%] flex justify-between">
+                                    <div className=" lg:w-[55%] w-[80%] sm:w-[55%] flex justify-between">
                                         <div className="">
                                             <img src={cart02} alt="" />
                                         </div>
@@ -111,7 +111,7 @@ const Proceed = () => {
                                <div className="flex justify-between  items-center mt-9 relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#0D0E43]">
                                
                                     
-                                    <div className="w-[55%] flex justify-between">
+                                    <div className="lg:w-[55%] w-[80%] sm:w-[55%] flex justify-between">
                                         <div className="">
                                             <img src={cart01} alt="" />
                                         </div>

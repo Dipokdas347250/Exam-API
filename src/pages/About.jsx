@@ -19,11 +19,11 @@ const About = () => {
                     <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>Pages ,</h3>
                     <p className='font-Sans font-bold text-[16px] text-[#FB2E86]'>About Us</p>
                 </div>
-                <div className="flex justify-between mt-[100px]">
-                    <div className="w-[50%]">
+                <div className="lg:flex justify-between mt-[100px]">
+                    <div className="lg:w-[50%] w-full">
                         <img src={about} alt="" />
                     </div>
-                    <div className="w-[50%]">
+                    <div className="lg:w-[50%] w-full">
                         <div className="mt-[50px]">
                         <h3 className='font-Sans font-bold text-[36px] text-[#0D0E43]'>Know About Our Ecomerce
                         Business, History</h3>
@@ -98,7 +98,7 @@ const About = () => {
                         <img className='ml-[50%] translate-x-[-50%] mt-[20px]' src={client} alt="" />
                         <h4 className='  font-Sans font-bold text-[16px] text-[#0D0E43] mt-[20px] '>Selina Gomez</h4>
                         <h4 className='  font-Sans font-semibold text-[14px] text-[#0D0E43] '>Ceo At Webecy Digital</h4>
-                        <p className='  font-Sans font-semibold text-[14px] text-[#0D0E43] mt-[20px] w-[40%] ml-[50%] translate-x-[-50%] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non duis ultrices quam vel dui sollicitudin aliquet id arcu. Nam vitae a enim nunc, sed sapien egestas ac nam. Tristique ultrices dolor aliquam lacus volutpat praesent.</p>
+                        <p className='  font-Sans font-semibold text-[14px] text-[#0D0E43] mt-[20px] lg:w-[40%] w-full lh:ml-[50%] translate-x-[-50%] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non duis ultrices quam vel dui sollicitudin aliquet id arcu. Nam vitae a enim nunc, sed sapien egestas ac nam. Tristique ultrices dolor aliquam lacus volutpat praesent.</p>
                     </div>
                 </div>
         </Container>

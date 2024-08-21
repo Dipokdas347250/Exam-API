@@ -19,8 +19,8 @@ export const Addtocart = () => {
 
 
                 <div className="mt-[100px] px-3 ">
-                    <div className=" flex justify-between">
-                        <div className="w-[65%]">
+                    <div className=" lg:flex w-full justify-between">
+                        <div className="lg:w-[65%] w-full">
                             <div className=" relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#0D0E43]">
                                 <div className=" flex justify-between">
                                     <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Product</h3>
@@ -29,11 +29,11 @@ export const Addtocart = () => {
                                     <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Total</h3>
                                 </div>
                                 <div className="flex justify-between items-center mt-[50px]">
-                                    <div className="w-[28%] flex justify-between">
+                                    <div className="w-[28%]  flex justify-between">
                                         <div className="">
                                             <img src={cart01} alt="" />
                                         </div>
-                                        <div className="">
+                                        <div className=" hidden lg:block">
                                             <h3>Ut diam consequat</h3>
                                             <h3>Color: Brown</h3>
                                             <h3>Size:XL</h3>
@@ -57,7 +57,7 @@ export const Addtocart = () => {
                                         <div className="">
                                             <img src={cart02} alt="" />
                                         </div>
-                                        <div className="">
+                                        <div className="hidden lg:block">
                                             <h3>Ut diam consequat</h3>
                                             <h3>Color: Brown</h3>
                                             <h3>Size:XL</h3>
@@ -79,7 +79,7 @@ export const Addtocart = () => {
                             <button className='py-[10px] px-[30px] bg-[#FB2E86] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Clear Curt</button>
                             </div>
                         </div>
-                        <div className="w-[30%]">
+                        <div className="lg:w-[30%] w-full">
                             <div className=" text-center">
                                 <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Cart Totals</h3>
                                 <div className="py-[20px] px-[20px] bg-[#0D0E43] mt-[40px] rounded-md">

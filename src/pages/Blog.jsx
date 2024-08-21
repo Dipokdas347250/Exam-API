@@ -29,11 +29,11 @@ const Blog = () => {
                     <p className='font-Sans font-bold text-[16px] text-[#FB2E86]'>Shopping Curt</p>
                 </div>
 
-                <div className="flex justify-between py-12 px-3 ">
-                    <div className="w-[69%]">
+                <div className="lg:flex  justify-between py-12 px-3 ">
+                    <div className="lg:w-[69%] w-full">
                         <div className="">
                             <img src={blog001} alt="" />
-                            <div className="w-[40%] flex justify-around mt-5">
+                            <div className="lg:w-[40%] flex justify-around mt-5">
                                 <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43] py-2 px-5 bg-[#FFE7F9]'>Surf Auxion</h3>
                                 <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43] py-2 px-5 bg-[#FFE7F9]'>Aug 09 2020</h3>
                             </div>
@@ -48,7 +48,7 @@ const Blog = () => {
 
                         <div className="mt-16">
                             <img src={blog002} alt="" />
-                            <div className="w-[40%] flex justify-around mt-5">
+                            <div className="lg:w-[40%] flex justify-around mt-5">
                                 <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43] py-2 px-5 bg-[#FFE7F9]'>Surf Auxion</h3>
                                 <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43] py-2 px-5 bg-[#FFE7F9]'>Aug 09 2020</h3>
                             </div>
@@ -64,7 +64,7 @@ const Blog = () => {
 
                         <div className="mt-16">
                             <img src={blog003} alt="" />
-                            <div className="w-[40%] flex justify-around mt-5">
+                            <div className="lg:w-[40%] flex justify-around mt-5">
                                 <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43] py-2 px-5 bg-[#FFE7F9]'>Surf Auxion</h3>
                                 <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43] py-2 px-5 bg-[#FFE7F9]'>Aug 09 2020</h3>
                             </div>
@@ -85,7 +85,7 @@ const Blog = () => {
 
 
 
-                    <div className="w-[28%]">
+                    <div className="lg:w-[28%] w-full">
                         <div className="">
                             <h3 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Search</h3>
                             <div className=" relative items-center">
