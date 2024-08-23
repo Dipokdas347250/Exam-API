@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Container from './Container'
-import Flex from './Flex'
 import chair01 from "../assets/chair01.png"
 import chair02 from "../assets/chair02.png"
 import chair03 from "../assets/chair03.png"
@@ -8,6 +7,7 @@ import chair04 from "../assets/chair04.png"
 import { FaArrowRight ,FaArrowLeft } from "react-icons/fa";
 
 import Slider from "react-slick";
+import { apiData } from './ContextApi'
 
 function SampleNextArrow(props) {
     const {  onClick } = props;
@@ -30,14 +30,23 @@ function SampleNextArrow(props) {
   
 
 const Featured = () => {
+     
+     let data = useContext(apiData)
+     console.log(data);
+     
+     
+    
+   
+
+
     const settings = {
-        dots: true,
+       
         infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-    speed: 2000,
+    speed: 1000,
     autoplaySpeed: 4000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -79,54 +88,22 @@ const Featured = () => {
             </div>
             
             <Slider className='' {...settings} >
-                <div className="lg:w-[24%] w-full pt-[20px] pb-2 bg-[#F6F7FB] ">
-                    <div className="">
-                   <img className='ml-[50%] translate-x-[-50%] h-[250px]' src={chair01} alt="" />
-                   <div className=" relative text-center  w-[100%] py-[10px] bg-[#fff] mt-[50px] before:absolute  before:contain-[''] before:bottom-0 before:right-0 before:w-[100%] before:h-0 before:bg-[#2F1AC4] before:duration-300 before:ease-in-out before:hover:h-[100%]  ">
-                        
-                        <h3 className=' relative font-Sans font-bold text-[22px] text-[#FB2E86] after:absolute after:contain-[""] after:top-[30px] after:left-[50%] after:translate-x-[-50%] after:h-[4px] after:w-[120px]  after:bg-[#05E6B7]'>Cantilever chair</h3>
-                        <h4 className='  font-Sans font-bold text-[16px] text-[#000] mt-[10px] '>Code - Y523201</h4>
-                        <h5 className=' relative font-Sans font-bold text-[16px] text-[#000] '>$42.00</h5>
-                        
-                    </div>
-                    </div>
-                </div>
-                <div className="lg:w-[24%] w-fullpt-[45px] pb-2 bg-[#F6F7FB] ">
-                    <div className="">
-                   <img className='ml-[50%] translate-x-[-50%] h-[270px]' src={chair02} alt="" />
-                   <div className=" relative text-center  w-[100%] py-[10px] bg-[#fff] mt-[50px] before:absolute  before:contain-[''] before:bottom-0 before:right-0 before:w-[100%] before:h-[0] before:bg-[#2F1AC4] before:duration-300 before:ease-in-out before:hover:h-[100%] before:hover:text-[#fff] ">
-                        
-                        <h3 className=' relative font-Sans font-bold text-[22px] text-[#FB2E86] after:absolute after:contain-[""] after:top-[30px] after:left-[50%] after:translate-x-[-50%] after:h-[4px] after:w-[120px]  after:bg-[#05E6B7]'>Cantilever chair</h3>
-                        <h4 className=' relative font-Sans font-bold text-[16px] text-[#000] mt-[10px] '>Code - Y523201</h4>
-                        <h5 className=' relative font-Sans font-bold text-[16px] text-[#000] '>$42.00</h5>
-                        
-                    </div>
-                    </div>
-                </div>
-                <div className="lg:w-[24%] w-full pt-[20px] pb-2 bg-[#F6F7FB] ">
-                    <div className="">
-                   <img className='ml-[50%] translate-x-[-50%] h-[250px]' src={chair03} alt="" />
-                   <div className=" relative text-center  w-[100%] py-[10px] bg-[#fff] mt-[50px] before:absolute  before:contain-[''] before:bottom-0 before:right-0 before:w-[100%] before:h-[0] before:bg-[#2F1AC4] before:duration-300 before:ease-in-out before:hover:h-[100%] before:hover:text-[#fff] ">
-                        
-                        <h3 className=' relative font-Sans font-bold text-[22px] text-[#FB2E86] after:absolute after:contain-[""] after:top-[30px] after:left-[50%] after:translate-x-[-50%] after:h-[4px] after:w-[120px]  after:bg-[#05E6B7]'>Cantilever chair</h3>
-                        <h4 className=' relative font-Sans font-bold text-[16px] text-[#000] mt-[10px] '>Code - Y523201</h4>
-                        <h5 className=' relative font-Sans font-bold text-[16px] text-[#000] '>$42.00</h5>
-                        
-                    </div>
-                    </div>
-                </div>
-                <div className="lg:w-[24%] w-full pt-[45px] pb-2 bg-[#F6F7FB] ">
-                    <div className="">
-                   <img className='ml-[50%] translate-x-[-50%] h-[225px]' src={chair04} alt="" />
-                   <div className=" relative text-center  w-[100%] py-[10px] bg-[#fff] mt-[50px] before:absolute  before:contain-[''] before:bottom-0 before:right-0 before:w-[100%] before:h-[0] before:bg-[#2F1AC4] before:duration-300 before:ease-in-out before:hover:h-[100%] before:hover:text-[#fff] ">
-                        
-                        <h3 className=' relative font-Sans font-bold text-[22px] text-[#FB2E86] after:absolute after:contain-[""] after:top-[30px] after:left-[50%] after:translate-x-[-50%] after:h-[4px] after:w-[120px]  after:bg-[#05E6B7]'>Cantilever chair</h3>
-                        <h4 className=' relative font-Sans font-bold text-[16px] text-[#000] mt-[10px] '>Code - Y523201</h4>
-                        <h5 className=' relative font-Sans font-bold text-[16px] text-[#000] '>$42.00</h5>
-                        
-                    </div>
-                    </div>
-                </div>
+              {data.map((item)=>(
+                 <div className="lg:w-[24%] w-full pt-[20px] pb-2 bg-[#F6F7FB]  " item={item}>
+                 <div className="">
+                <img className='ml-[50%] translate-x-[-50%] h-[250px]' src={item.thumbnail} alt="" />
+                <div className=" relative text-center  w-[100%] py-[10px] bg-[#fff] mt-[50px] before:absolute  before:contain-[''] before:bottom-0 before:right-0 before:w-[100%] before:h-0 before:bg-[#2F1AC4] before:duration-300 before:ease-in-out before:hover:h-[100%]  ">
+                     
+                     <h3 className=' relative font-Sans font-bold text-[22px] text-[#FB2E86] after:absolute after:contain-[""] after:top-[30px] after:left-[50%] after:translate-x-[-50%] after:h-[4px] after:w-[70%]  after:bg-[#05E6B7]'>{item.title}</h3>
+                     <h4 className='  font-Sans font-bold text-[16px] text-[#000] mt-[10px] '>Code - Y523201</h4>
+                     <h5 className=' relative font-Sans font-bold text-[16px] text-[#000] '>${item.price }</h5>
+                     
+                 </div>
+                 </div>
+             </div>
+              ))}
+               
+              
                 </Slider>
             
             

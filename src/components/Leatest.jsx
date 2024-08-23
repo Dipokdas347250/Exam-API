@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Container from './Container'
 import Flex from './Flex'
 import chair001 from "../assets/chair001.png"
@@ -7,8 +7,12 @@ import chair003 from "../assets/chair003.png"
 import chair004 from "../assets/chair004.png"
 import chair005 from "../assets/chair005.png"
 import chair006 from "../assets/chair006.png"
+import { apiData } from './ContextApi'
 
 const Leatest = () => {
+
+   let data = useContext(apiData)
+
   return (
     <section className='py-[100px] '>
         <Container>
