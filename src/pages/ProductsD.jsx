@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Container from '../components/Container'
 import ECommerceBar from '../components/ECommerceBar'
 import shop1 from "../assets/shop1.png"
@@ -13,8 +13,40 @@ import { FaStar, FaRegHeart, } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from 'react-router-dom'
+import { apiData } from '../components/ContextApi'
+import Post from '../components/pagination/Post'
+import PaginationArea from '../components/pagination/PaginationArea'
 
 export const ProductsD = () => {
+
+    let data = useContext(apiData)
+    
+
+    let [currentpage, setCurrentpage] = useState(1)
+    let [perpage,setPerpage] = useState(6)
+
+    let lastpage = currentpage * perpage
+    let firstpage = lastpage - perpage
+
+     
+
+    let allData = data.slice(firstpage , lastpage)
+    
+    let pageNumber = []
+
+
+    for( let i = 0; i < Math.ceil(data.length / perpage ); i++){
+        pageNumber.push(i)
+
+    }
+    
+   let paginte = (pageNumber)=>{
+    setCurrentpage(pageNumber);
+   
+   }
+    
+
+
     return (
         <section className='py-[100px] px-3 bg-[#F6F5FF]'>
             <Container>
@@ -134,242 +166,18 @@ export const ProductsD = () => {
                         </div>
                     </div>
                     <div className=" lg:w-[73%] w-full">
-                        <Link to="/productDetails">
-                        
-                        <div className="lg:flex justify-between mt-[50px] px-3">
-                            <div className="lg:w-[40%] w-full">
-                                <div className="">
-                                    <img className='w-full' src={shop1} alt="" />
-                                </div>
-                            </div>
-                            <div className="lg:w-[55%] w-full">
-                                <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
-                                    <div className="flex">
-                                        <div className="flex mt-[20px] gap-2">
-                                            <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
-                                            <h4 className='font-Sans font-bold text-[16px] text-[#FB2E86]'>$26.00</h4>
-                                        </div>
-                                        <div className="flex mt-[20px] gap-2 ml-[20px]">
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                        </div>
-                                    </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
-                                    <div className="flex mt-[20px] gap-6">
-                                        <FiShoppingCart />
-                                        <FaRegHeart />
-                                        <IoSearch />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="lg:flex justify-between mt-[50px] px-3">
-                            <div className="lg:w-[40%] w-full">
-                                <div className="">
-                                    <img className='w-full' src={shop2} alt="" />
-                                </div>
-                            </div>
-                            <div className="lg:w-[55%] w-full">
-                                <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
-                                    <div className="flex">
-                                        <div className="flex mt-[20px] gap-2">
-                                            <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
-                                            <h4 className='font-Sans font-bold text-[16px] text-[#FB2E86]'>$26.00</h4>
-                                        </div>
-                                        <div className="flex mt-[20px] gap-2 ml-[20px]">
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                        </div>
-                                    </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
-                                    <div className="flex mt-[20px] gap-6">
-                                        <FiShoppingCart />
-                                        <FaRegHeart />
-                                        <IoSearch />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="lg:flex justify-between mt-[50px] px-3">
-                            <div className="lg:w-[40%] w-full">
-                                <div className="">
-                                    <img className='w-full' src={shop3} alt="" />
-                                </div>
-                            </div>
-                            <div className="lg:w-[55%] w-full">
-                                <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
-                                    <div className="flex">
-                                        <div className="flex mt-[20px] gap-2">
-                                            <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
-                                            <h4 className='font-Sans font-bold text-[16px] text-[#FB2E86]'>$26.00</h4>
-                                        </div>
-                                        <div className="flex mt-[20px] gap-2 ml-[20px]">
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                        </div>
-                                    </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
-                                    <div className="flex mt-[20px] gap-6">
-                                        <FiShoppingCart />
-                                        <FaRegHeart />
-                                        <IoSearch />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="lg:flex justify-between mt-[50px] px-3">
-                            <div className="lg:w-[40%] w-full">
-                                <div className="">
-                                    <img className='w-full' src={shop4} alt="" />
-                                </div>
-                            </div>
-                            <div className="lg:w-[55%] w-full">
-                                <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
-                                    <div className="flex">
-                                        <div className="flex mt-[20px] gap-2">
-                                            <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
-                                            <h4 className='font-Sans font-bold text-[16px] text-[#FB2E86]'>$26.00</h4>
-                                        </div>
-                                        <div className="flex mt-[20px] gap-2 ml-[20px]">
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                        </div>
-                                    </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
-                                    <div className="flex mt-[20px] gap-6">
-                                        <FiShoppingCart />
-                                        <FaRegHeart />
-                                        <IoSearch />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="lg:flex justify-between mt-[50px] px-3">
-                            <div className="lg:w-[40%] w-full">
-                                <div className="">
-                                    <img className='w-full' src={shop5} alt="" />
-                                </div>
-                            </div>
-                            <div className="lg:w-[55%] w-full">
-                                <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
-                                    <div className="flex">
-                                        <div className="flex mt-[20px] gap-2">
-                                            <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
-                                            <h4 className='font-Sans font-bold text-[16px] text-[#FB2E86]'>$26.00</h4>
-                                        </div>
-                                        <div className="flex mt-[20px] gap-2 ml-[20px]">
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                        </div>
-                                    </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
-                                    <div className="flex mt-[20px] gap-6">
-                                        <FiShoppingCart />
-                                        <FaRegHeart />
-                                        <IoSearch />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="lg:flex justify-between mt-[50px] px-3">
-                            <div className="lg:w-[40%] w-full">
-                                <div className="">
-                                    <img className='w-full' src={shop6} alt="" />
-                                </div>
-                            </div>
-                            <div className="lg:w-[55%] w-full">
-                                <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
-                                    <div className="flex">
-                                        <div className="flex mt-[20px] gap-2">
-                                            <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
-                                            <h4 className='font-Sans font-bold text-[16px] text-[#FB2E86]'>$26.00</h4>
-                                        </div>
-                                        <div className="flex mt-[20px] gap-2 ml-[20px]">
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                        </div>
-                                    </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
-                                    <div className="flex mt-[20px] gap-6">
-                                        <FiShoppingCart />
-                                        <FaRegHeart />
-                                        <IoSearch />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="lg:flex justify-between mt-[50px] px-3">
-                            <div className="lg:w-[40%] w-full">
-                                <div className="">
-                                    <img className='w-full' src={shop7} alt="" />
-                                </div>
-                            </div>
-                            <div className="lg:w-[55%] w-full">
-                                <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Accumsan tincidunt</h2>
-                                    <div className="flex">
-                                        <div className="flex mt-[20px] gap-2">
-                                            <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>$26.00</h3>
-                                            <h4 className='font-Sans font-bold text-[16px] text-[#FB2E86]'>$26.00</h4>
-                                        </div>
-                                        <div className="flex mt-[20px] gap-2 ml-[20px]">
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                            <FaStar />
-                                        </div>
-                                    </div>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
-                                    <div className="flex mt-[20px] gap-6">
-                                        <FiShoppingCart />
-                                        <FaRegHeart />
-                                        <IoSearch />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        </Link>
-                        </div>
-                    
-                   
+                       <Post allData={allData}/>
+                    <div className="text-end">
+                        <PaginationArea pageNumber={pageNumber} paginte={paginte}/>
+                    </div>
+                    </div>
+
+
                 </div>
 
-                <div className="mt-[100px]">
-                        <div className="lg:flex justify-between">
-                            <div className="w-[15%]"></div>
-                            <div className="lg:w-[70%] w-full">
-                                <img src={chair01} alt="" />
-                            </div>
-                            <div className="w-[15%]"></div>
-
-                        </div>
-                    </div>
+                <div className="pt-[100px] px-3">
+                    <img className='ml-[50%] translate-x-[-50%] ' src={chair01} alt="" />
+                </div>
             </Container>
         </section>
     )

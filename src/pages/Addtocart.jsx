@@ -92,12 +92,12 @@ export const Addtocart = () => {
                                         <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>£219.00</h3>
                                     </div>
                                     <div className="flex  gap-3 mt-[40px]  ">
-                                        <input type="radio" name='yes' />
+                                        <input  type="radio"   name='yes' />
                                         <p className='font-Sans font-semibold text-[16px] text-[#fff]'>Shipping & taxes calculated at checkout</p>
                                     </div>
                                     <div className="mt-[30px]">
                                     <Link to="/Proceed">
-                                    <button className='py-[10px] px-[80px] bg-[#19D16F] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Proceed To Checkout</button>
+                                    <button className=' relative py-[10px] px-[80px] bg-[#19D16F] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg duration-300 ease-in-out hover:text-[#000] z-50  after:absolute after:contain-[""] after:top-0 after:left-0 after:h-full after:w-0 after:bg-[#FB2E86] after:-z-50 after:rounded-lg after:duration-300 after:ease-in-out after:hover:w-full' >Proceed To Checkout</button>
                                     </Link>
                                     </div>
                                 </div>
@@ -105,15 +105,19 @@ export const Addtocart = () => {
                             </div>
                             <div className="  mt-[50px]">
                                <div className="text-center">
-                               <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Cart Totals</h3>
+                               <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Calculate Shopping</h3>
                                </div>
                                 <div className="py-[20px] px-[20px] bg-[#0D0E43] mt-[20px] rounded-md">
                                     <div className="  relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#fff]">
-                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>Subtotals:</h3>
+                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>BangalDesh</h3>
                                        
                                     </div>
                                     <div className=" mt-[30px]   relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#fff]">
-                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>Totals:</h3>
+                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>Mirpur Dhaka-1200</h3>
+                                        
+                                    </div>
+                                    <div className=" mt-[30px]   relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#fff]">
+                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>Postal Code</h3>
                                         
                                     </div>
                                     

@@ -248,17 +248,9 @@ const ShopLIst = () => {
         </div>
        
 
-        <div className="mt-[100px]">
-        <div className="lg:flex justify-between">
-    <div className="w-[15%]"></div>
-    <div className="lg:w-[70%] w-full">
-      <img src={chair01} alt="" />
-    </div>
-    <div className="w-[15%]"></div>
-     
-   </div>
-     
-        </div>
+        <div className="pt-[100px] px-3">
+                <img className='ml-[50%] translate-x-[-50%] ' src={chair01} alt="" />
+                </div>
     </Container>
    </section>
   )

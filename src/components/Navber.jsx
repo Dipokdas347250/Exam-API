@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Navber = () => {
   return (
-    <section className='py-4 bg-[#f1f1f1]  px-3 '>
+    <section className='py-4 bg-[#f1f1f1] px-3 '>
       <Container>
         <div className=" lg:flex items-center">
           <div className="w-[20%]">

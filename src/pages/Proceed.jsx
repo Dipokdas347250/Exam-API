@@ -144,7 +144,7 @@ const Proceed = () => {
                                     <div className="mt-[30px]">
                                     
                                    <Link to="/Yourorder">
-                                   <button className=' py-4 px-10 bg-[#19D16F] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Proceed To Checkout</button>
+                                   <button className=' relative py-4 px-10 bg-[#19D16F] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg duration-300 ease-in-out hover:text-[#000] z-50  after:absolute after:contain-[""] after:top-0 after:left-0 after:h-full after:w-0 after:bg-[#FB2E86] after:-z-50 after:rounded-lg after:duration-300 after:ease-in-out after:hover:w-full'>Proceed To Checkout</button>
                                    </Link>
                                     
                                     </div>
