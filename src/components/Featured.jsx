@@ -34,7 +34,7 @@ function SampleNextArrow(props) {
 const Featured = () => {
      
      let data = useContext(apiData)
-     console.log(data);
+     
      
      
     

@@ -3,7 +3,7 @@ import Container from './Container'
 import chair01 from "../assets/chair01.png"
 
 const FeaturedItem = ({item}) => {
-  console.log(item);
+  
   
   return (
     <section>

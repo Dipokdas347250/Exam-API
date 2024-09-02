@@ -109,7 +109,7 @@ export const Addtocart = () => {
                                </div>
                                 <div className="py-[20px] px-[20px] bg-[#0D0E43] mt-[20px] rounded-md">
                                     <div className="  relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#fff]">
-                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>BangalDesh</h3>
+                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>BanglaDesh</h3>
                                        
                                     </div>
                                     <div className=" mt-[30px]   relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#fff]">

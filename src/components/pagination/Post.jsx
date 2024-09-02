@@ -11,7 +11,7 @@ const Post = ({allData}) => {
     return (
         <>
             {allData.map((item) => (
-                <Link to={`/ProductsD/:id${item.id}`}>
+                <Link to={`/ProductsD/${item.id}`}>
 
                     <div className="lg:flex justify-between mt-[50px] px-3">
                         <div className="lg:w-[40%] w-full">

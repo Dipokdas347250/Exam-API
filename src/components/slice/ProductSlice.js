@@ -3,13 +3,15 @@ import { createSlice } from '@reduxjs/toolkit'
 export const ProductSlice = createSlice({
   name: 'product',
   initialState: {
-    cartItem: 0,
+    cartItem: []
   },
   reducers: {
-    addtocart: (state) => {
- 
-    },
+    addtocart: (state , action) => {
+     let findProduct = state.cartItem.findIndex((item)=> item.id == action.payload.id) 
   
+     console.log(findProduct);
+    },
+    
   },
 })
 

@@ -44,6 +44,20 @@ export const ProductsD = () => {
     setCurrentpage(pageNumber);
    
    }
+
+   let next = ()=>{
+    if(currentpage < pageNumber.length){
+
+        setCurrentpage((state) => state + 1 ) 
+    }
+    
+   }
+   let prev =  ()=>{
+    if(currentpage > 1){
+
+        setCurrentpage((state) => state - 1 ) 
+    }
+   }
     
 
 
@@ -168,7 +182,7 @@ export const ProductsD = () => {
                     <div className=" lg:w-[73%] w-full">
                        <Post allData={allData}/>
                     <div className="text-end">
-                        <PaginationArea pageNumber={pageNumber} paginte={paginte}/>
+                        <PaginationArea pageNumber={pageNumber} paginte={paginte} currentpage={currentpage} next={next} prev={prev}/>
                     </div>
                     </div>
 
