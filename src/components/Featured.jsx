@@ -52,6 +52,17 @@ const Featured = () => {
     autoplaySpeed: 4000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+        }
+      },
+
+    ],
    
         appendDots: dots => (
           <div
