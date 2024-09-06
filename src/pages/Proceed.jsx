@@ -3,8 +3,21 @@ import Container from '../components/Container'
 import cart01 from "../assets/cart01.png"
 import cart02 from "../assets/cart02.png"
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Proceed = () => {
+
+    let data = useSelector((state)=>state.product.cartItem)
+    console.log(data);
+    
+    const {totalprice , totalqun} = data.reduce((acc,item)=>{
+        acc.totalprice += item.price * item.qun
+        acc.totalqun += item.qun
+
+        return acc
+  },{totalprice:0 ,totalqun:0 })
+
+
     return (
         <>
             <section className=' py-24 px-3 bg-[#F6F5FF]'>
@@ -67,89 +80,57 @@ const Proceed = () => {
 
                                 </form>
                             </div>
-                            <div className="lg:w-[35%] w-full px-4  ">
-                               <div className="flex justify-between items-center relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#0D0E43]">
-                               
-                                    
-                                    <div className="lg:w-[55%] w-[80%] sm:w-[55%] mt-10 lg:mt-0 flex justify-between">
-                                        <div className="">
-                                            <img src={cart01} alt="" />
-                                        </div>
-                                        <div className="">
-                                            <h3>Ut diam consequat</h3>
-                                            <h3>Color: Brown</h3>
-                                            <h3>Size:XL</h3>
-                                        </div>
-                                   
-                                    
-                                    </div>
+                              <div className="lg:w-[35%] w-full px-4  ">
+                          {data.map((item)=>(
                                 
-                                <div className="w-[15%]">
-                                    <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>£219.00</h3>
-                                    </div>
-                               </div>
-                               <div className="flex justify-between  items-center mt-9 relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#0D0E43]">
-                               
-                                    
-                                    <div className=" lg:w-[55%] w-[80%] sm:w-[55%] flex justify-between">
-                                        <div className="">
-                                            <img src={cart02} alt="" />
-                                        </div>
-                                        <div className="">
-                                            <h3>Ut diam consequat</h3>
-                                            <h3>Color: Brown</h3>
-                                            <h3>Size:XL</h3>
-                                        </div>
+                              <div className="flex justify-between items-center relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#0D0E43]">
+                              
                                    
-                                    
-                                    </div>
-                                
-                                <div className="w-[15%]">
-                                    <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>£219.00</h3>
-                                    </div>
-                               </div>
-                               <div className="flex justify-between  items-center mt-9 relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#0D0E43]">
-                               
-                                    
-                                    <div className="lg:w-[55%] w-[80%] sm:w-[55%] flex justify-between">
-                                        <div className="">
-                                            <img src={cart01} alt="" />
-                                        </div>
-                                        <div className="">
-                                            <h3>Ut diam consequat</h3>
-                                            <h3>Color: Brown</h3>
-                                            <h3>Size:XL</h3>
-                                        </div>
+                                   <div className="lg:w-[55%] w-[80%] sm:w-[55%] mt-10 lg:mt-0 flex justify-between">
+                                       <div className="">
+                                           <img src={item.thumbnail} alt="" />
+                                       </div>
+                                       <div className="mt-9">
+                                           <h3>{item.brand}</h3>
+                                           <h3>Color: Brown</h3>
+                                           
+                                       </div>
+                                  
                                    
-                                    
-                                    </div>
-                                
-                                <div className="w-[15%]">
-                                    <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>£219.00</h3>
-                                    </div>
+                                   </div>
+                               
+                               <div className="w-[15%]">
+                                   <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>${item.price * item.qun}</h3>
+                                   </div>
+                              </div>
+                            ))}
+                              <div className="py-[20px] px-[20px] bg-[#0D0E43] mt-12 rounded-md">
+                                   <div className="flex justify-between   relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#fff]">
+                                       <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>Subtotals:</h3>
+                                       <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>£{totalprice}</h3>
+                                   </div>
+                                   <div className="flex justify-between mt-[30px]   relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#fff]">
+                                       <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>Quntity:</h3>
+                                       <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>{totalqun}</h3>
+                                   </div>
+                                   <div className="flex justify-between mt-[30px]   relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#fff]">
+                                       <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>Totals:</h3>
+                                       <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>£{totalprice}</h3>
+                                   </div>
+                                   <div className="flex  gap-3 mt-[40px]  ">
+                                       <input type="radio" name='yes' />
+                                       <p className='font-Sans font-semibold text-[16px] text-[#fff]'>Shipping & taxes calculated at checkout</p>
+                                   </div>
+                                   <div className="mt-[30px]">
+                                   
+                                  <Link to="/Yourorder">
+                                  <button className=' relative py-4 px-10 bg-[#19D16F] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg duration-300 ease-in-out hover:text-[#000] z-50  after:absolute after:contain-[""] after:top-0 after:left-0 after:h-full after:w-0 after:bg-[#FB2E86] after:-z-50 after:rounded-lg after:duration-300 after:ease-in-out after:hover:w-full'>Proceed To Checkout</button>
+                                  </Link>
+                                   
+                                   </div>
                                </div>
-                               <div className="py-[20px] px-[20px] bg-[#0D0E43] mt-12 rounded-md">
-                                    <div className="flex justify-between   relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#fff]">
-                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>Subtotals:</h3>
-                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>£219.00</h3>
-                                    </div>
-                                    <div className="flex justify-between mt-[30px]   relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#fff]">
-                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>Totals:</h3>
-                                        <h3 className='font-Sans font-semibold text-[18px] text-[#fff]'>£219.00</h3>
-                                    </div>
-                                    <div className="flex  gap-3 mt-[40px]  ">
-                                        <input type="radio" name='yes' />
-                                        <p className='font-Sans font-semibold text-[16px] text-[#fff]'>Shipping & taxes calculated at checkout</p>
-                                    </div>
-                                    <div className="mt-[30px]">
-                                    
-                                   <Link to="/Yourorder">
-                                   <button className=' relative py-4 px-10 bg-[#19D16F] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg duration-300 ease-in-out hover:text-[#000] z-50  after:absolute after:contain-[""] after:top-0 after:left-0 after:h-full after:w-0 after:bg-[#FB2E86] after:-z-50 after:rounded-lg after:duration-300 after:ease-in-out after:hover:w-full'>Proceed To Checkout</button>
-                                   </Link>
-                                    
-                                    </div>
-                                </div>
-                            </div>
+                           </div>
+                          
                         </div>
                     </div>
 

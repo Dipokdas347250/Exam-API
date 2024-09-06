@@ -5,14 +5,15 @@ import cart02 from "../assets/cart02.png"
 import { Link } from 'react-router-dom'
 import {useDispatch, useSelector} from "react-redux"
 import { GiCrossedBones } from "react-icons/gi";
-import { productDecrement, productIncrement, removeProduct  } from '../components/slice/ProductSlice'
+import { FaPlus ,FaMinus  } from "react-icons/fa";
+import { productDecrement, productIncrement, removeallProduct, removeProduct  } from '../components/slice/ProductSlice'
 
 
 export const Addtocart = () => {
     
     let dispatch = useDispatch()
     let data = useSelector((state)=>state .product.cartItem)
-    console.log(data);
+    
 
     let handleIncrement =  (index)=>{
         dispatch(productIncrement(index))
@@ -25,6 +26,10 @@ export const Addtocart = () => {
     let handleRemove = (index)=>{
         dispatch(removeProduct(index))
 
+    }
+    let handleallRemove =(index)=>{
+        dispatch(removeallProduct(index))
+        
     }
 
 
@@ -87,21 +92,21 @@ export const Addtocart = () => {
                                     </div>
                                     <div className="w-[70%] flex justify-between">
                                         <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43] mr-[30px]'>${item.price}</h3>
-                                        <div className="">
-                                            <button onClick={() =>handleDecrement(index)} className='font-Sans font-bold text-[20px] text-[#0D0E43]'>-</button>
-                                            <button className='font-Sans font-bold text-[16px] text-[#0D0E43] px-3'>{item.qun}</button>
-                                            <button onClick={() =>handleIncrement(index)} className='font-Sans font-bold text-[20px] text-[#0D0E43]'>+</button>
+                                        <div className=" gap-x-6 ">
+                                            <button onClick={() =>handleDecrement(index)} className='font-Sans font-bold text-[16px] text-[#0D0E43] py-2 px-2 border-2 border-[#000]  rounded-lg bg-[#d5dbdb] '><FaMinus /></button>
+                                            <button className='font-Sans font-bold text-[20px] text-[#0D0E43] px-5   '>{item.qun}</button>
+                                            <button onClick={() =>handleIncrement(index)} className='font-Sans font-bold text-[16px] text-[#0D0E43] py-2 px-2 border-2 border-[#000]  rounded-lg bg-[#d5dbdb] '><FaPlus/></button>
                                         </div>
                                         <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>£{item.price * item.qun}</h3>
                                     </div>
                                 </div>
                             </div>
                             ))}
-                            
                             <div className="flex justify-between">
                             <button className='py-[10px] px-[30px] bg-[#FB2E86] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Update Curt</button>
-                            <button className='py-[10px] px-[30px] bg-[#FB2E86] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Clear Curt</button>
+                            <button  onClick={()=>handleallRemove(index)} className='py-[10px] px-[30px] bg-[#FB2E86] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Clear Curt</button>
                             </div>
+                            
                         </div>
                         <div className="lg:w-[30%] w-full">
                             <div className=" text-center">
