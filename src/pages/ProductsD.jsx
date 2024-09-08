@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Container from '../components/Container'
 import ECommerceBar from '../components/ECommerceBar'
 import shop1 from "../assets/shop1.png"
@@ -15,6 +15,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { Link } from 'react-router-dom'
 import { apiData } from '../components/ContextApi'
 import Post from '../components/pagination/Post'
+import { TiArrowSortedDown } from "react-icons/ti";
 import PaginationArea from '../components/pagination/PaginationArea'
 
 export const ProductsD = () => {
@@ -28,14 +29,18 @@ export const ProductsD = () => {
     let lastpage = currentpage * perpage
     let firstpage = lastpage - perpage
 
-     
-
     let allData = data.slice(firstpage , lastpage)
     
     let pageNumber = []
 
+    let [category , setCategory] = useState([])
+    let [brand , setBrand] = useState([])
+    let [categorySearchFilter , setCategorySearchFilter] = useState([])
+    let [brandSearchFilter , setBrandSearchFilter] = useState([])
+   
 
-    for( let i = 0; i < Math.ceil(data.length / perpage ); i++){
+
+    for( let i = 0; i < Math.ceil( categorySearchFilter.length > 0 ? categorySearchFilter : data.length / perpage ); i++){
         pageNumber.push(i)
 
     }
@@ -58,6 +63,26 @@ export const ProductsD = () => {
         setCurrentpage((state) => state - 1 ) 
     }
    }
+   
+   useEffect(()=>{
+    setCategory([...new Set (data.map((item)=>item.category))])
+    setBrand([...new Set (data.map((item)=>item.category))])
+
+   },[data])
+   
+   let handlecategory = (citem)=>{
+    let categoryFilter = data.filter((item)=>item.category == citem)
+    setCategorySearchFilter(categoryFilter)
+    
+   }
+   let handlebrand = (citem)=>{
+    let brandFilter = data.filter((item)=>item.brand == citem)
+    setBrandSearchFilter(brandFilter)
+    
+   }
+   console.log(data);
+   
+   
     
 
 
@@ -79,32 +104,17 @@ export const ProductsD = () => {
                     <div className="lg:w-[23%] w-full mt-[50px]">
                         <div className="">
                             <h2 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[3px] after:w-[150px] after:bg-[#0D0E43]'>Product Brand</h2>
+
                         </div>
                         <div className="mt-[30px]">
+                            {category.map((item)=>(
+
                             <div className="flex  gap-3  ">
                                 <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Coaster Furniture</p>
+                                <p onClick={()=>handlecategory(item)} className='font-Sans font-semibold text-[16px] text-[#0D0E43] cursor-pointer'>{item}</p>
                             </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Fusion Dot High Fashion</p>
-                            </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Unique Furnitture Restor</p>
-                            </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Dream Furnitture Flipping</p>
-                            </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Young Repurposed</p>
-                            </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Green DIY furniture</p>
-                            </div>
+                            ))}
+                          
                         </div>
                         <div className="mt-[70px]">
                             <h2 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[3px] after:w-[150px] after:bg-[#0D0E43]'>Discount Offer</h2>
@@ -146,41 +156,21 @@ export const ProductsD = () => {
                             <h2 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[3px] after:w-[150px] after:bg-[#0D0E43]'>Product Brand</h2>
                         </div>
                         <div className="mt-[30px]">
+                            {brand.map((item)=>(
+
                             <div className="flex  gap-3  ">
                                 <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Prestashop</p>
+                                <p  onClick={()=>handlebrand(item)} className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>{item}</p>
                             </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Magento</p>
-                            </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Bigcommerce</p>
-                            </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>osCommerce</p>
-                            </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>3dcart</p>
-                            </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Bags Accessories</p>
-                            </div>
-                            <div className="flex  gap-3 mt-[5px] ">
-                                <input type="radio" name='yes' />
-                                <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>Watches</p>
-                            </div>
+                            ))}
+                            
                         </div>
                         <div className="mt-[70px]">
                             <h2 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[3px] after:w-[120px] after:bg-[#0D0E43]'>Price Filter</h2>
                         </div>
                     </div>
                     <div className=" lg:w-[73%] w-full">
-                       <Post allData={allData}/>
+                       <Post allData={allData} categorySearchFilter={categorySearchFilter} brandSearchFilter={brandSearchFilter}/>
                     <div className="text-end">
                         <PaginationArea pageNumber={pageNumber} paginte={paginte} currentpage={currentpage} next={next} prev={prev}/>
                     </div>

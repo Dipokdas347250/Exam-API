@@ -1,4 +1,3 @@
-import React from 'react'
 import Container from './Container'
 import Flex from './Flex'
 import { MdOutgoingMail } from "react-icons/md";
@@ -7,12 +6,20 @@ import { IoIosArrowDown } from "react-icons/io";
 import { BiSolidLogInCircle } from "react-icons/bi";
 import { FaRegHeart } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 
 
 
-const Header = () => {
+const Header = () => { 
+
+   let data = useSelector((state)=>state.product.cartItem)
+
+  
+   
+
   return (
     <section className=' py-2 bg-[#7E33E0] px-3  '>
         <Container>
@@ -54,11 +61,20 @@ const Header = () => {
                         <FaRegHeart/>
 
                     </div>
+                        <Link to="/addtocart">
                     <div className=" flex font-Sans font-semibold text-[16px] items-center text-[#F1F1F1]">
                         
+                        <div className="">
+
                         <FaShoppingCart/>
+                        </div>
+                        <div className=" text-[#FB2E86]">
+
+                        {data.length}
+                        </div>
 
                     </div>
+                        </Link>
                 </div>
            </div>
         </Container>
