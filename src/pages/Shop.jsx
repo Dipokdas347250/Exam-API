@@ -28,13 +28,15 @@ const Shop = () => {
                     <ECommerceBar />
                 </div>
 
-                {data.map((item)=>(
-                    <Link to="/shoplist">
+                
+                {data.map((item) => (
+                        <Link to="/shoplist">
 
-                   <ShopD item={item}/>
+                            <ShopD item={item} />
 
-                </Link>
+                        </Link>
                 ))}
+               
 
 
                 <div className="pt-[100px] px-3">

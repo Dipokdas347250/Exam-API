@@ -11,6 +11,7 @@ import Yourorder from "./pages/Yourorder"
 import Proceed from "./pages/Proceed"
 import Blog from "./pages/Blog"
 import Contact from "./pages/Contact"
+import Login from "./pages/Login"
 
 
 
@@ -27,6 +28,7 @@ let router = createBrowserRouter(createRoutesFromElements(
     <Route path="/About" element={<About/>}></Route>
     <Route path="/Blog" element={<Blog/>}></Route>
     <Route path="/Contact" element={<Contact/>}></Route>
+    <Route path="/Login" element={<Login/>}></Route>
 
 
   </Route>

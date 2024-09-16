@@ -3,8 +3,8 @@ import React from 'react'
 export const ShopD = ({item}) => {
   return (
     <>
-     <div className="mt-[50px] lg:flex   justify-between px-3">
-                        <div className="lg:w-[24%] w-full sm:w-[50%]">
+     <div className="mt-[50px] flex justify-between    px-3">
+                        <div className=" w-[25%]  ">
                             <div className="py-[30px] px-[30px] bg-[#EBF4F3]">
                                 <img src={item.thumbnail} alt="" />
                             </div>

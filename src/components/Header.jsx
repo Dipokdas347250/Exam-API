@@ -51,11 +51,13 @@ const Header = () => {
                         
 
                     </div>
+                    <Link to="/Login">
                     <div className=" flex font-Sans font-semibold text-[16px] items-center text-[#F1F1F1]">
                         <h3>Login</h3>
                         <BiSolidLogInCircle/>
 
                     </div>
+                    </Link>
                     <div className=" flex font-Sans font-semibold text-[16px] items-center text-[#F1F1F1]">
                         <h3>Wishlist</h3>
                         <FaRegHeart/>
