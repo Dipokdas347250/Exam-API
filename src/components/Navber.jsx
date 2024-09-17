@@ -59,7 +59,7 @@ const Navber = () => {
               <ul className={`lg:flex justify-between items-center lg:gap-8  py-5 lg:py-0 text-center z-50 absolute lg:static duration-700 ease-in-out ${show == true ? " bg-[#FB2E86] w-[50%] left-[0px] top-0  " : "  w-[50%] left-[-300px] top-[0px] "}`}>
 
                 <li className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43]   duration-300 ease-in-out hover:text-[#FB2E86]'><Link to="/">Home</Link>  </li>
-                <li className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86] mt-4 lg:mt-0'><Link to="/shop">Pages</Link></li>
+                <li className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86] mt-4 lg:mt-0'>Pages</li>
                 <li   className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86] mt-4 lg:mt-0'><Link to="/ProductsD">Products</Link></li>
                 <li   className=' items-center font-Sans font-semibold text-[16px] text-[#0D0E43] duration-300 ease-in-out hover:text-[#FB2E86] mt-4 lg:mt-0'>
                   <Link to="/Blog">Blog</Link>

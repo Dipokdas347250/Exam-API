@@ -22,12 +22,14 @@ const Login = () => {
   return (
     <section className='lg:py-[150px] px-3'>
     <Container>
-        <div className=" items-center ">
-            <h2 className='font-sans font-bold   text-[42px]  text-[#262626] '>Login</h2>
-            <h3 className='font-sans font-bold   text-[16px]  text-[#262626] '>Home  +  Login</h3>
-           
-
-        </div>
+    <div className="">
+                    <h3 className='font-Sans font-bold text-[42px] text-[#0D0E43]'>My Account</h3>
+                </div>
+                <div className=" flex">
+                    <h4 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>Home ,</h4>
+                    <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>Pages ,</h3>
+                    <p className='font-Sans font-bold text-[16px] text-[#FB2E86]'>My Account</p>
+                </div>
         <div className="lg:py-[150px] py-[50px]  bg-[#98AFC7] mt-[50px] items-center">
             <div className="my-[30px] mx-[50%] py-[50px] translate-x-[-50%] bg-[#fff] rounded-xl lg:w-[500px] w-[350px] px-5 ">
                 <form action="">
@@ -57,7 +59,7 @@ const Login = () => {
                             <h2 className=' font-sans font-medium   text-[16px]  text-[#262626] '>Forgot password?</h2>
                         </div>
                     </div>
-                    <div className="h-[50px] w-[100%] bg-[#000] mt-[30px]  items-center   cursor-pointer rounded-xl">
+                    <div className="h-[50px] w-[100%] bg-[#FB2E86] mt-[30px]  items-center   cursor-pointer rounded-xl">
                         <h5 className='font-sans font-bold   text-[16px]  text-[#fff] text-center leading-[50px]  '>Sign In</h5>
                     </div>
                     <div className="mt-[30px]">
